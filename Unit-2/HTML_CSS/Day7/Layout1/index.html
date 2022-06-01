@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #container{
+           height: 500px;
+           width: 90%;
+           /* border: 1px solid black; */
+           margin: auto;
+
+       }
+       .b1{
+            height: 100px;
+            width: 90%;
+            background-color: yellow;
+            margin: auto;
+       }
+       .b1>h2{
+           font-size: 60px;
+           padding-left: 15px;
+           padding-top: 10px;
+           box-sizing: border-box;
+       }
+       #b2{
+           display: grid;
+           width: 90%;
+           height: 60%;
+           grid-template-columns: repeat(4,1fr);
+           grid-template-rows: auto;
+           gap: 30px;
+          padding-top: 30px;
+          margin: auto;
+          box-sizing: border-box;
+       }
+       /* #b2>div{
+           border: 1px solid red;
+       } */
+       .box1{
+           background-color: red;
+       }
+       .box2{
+           background-color:greenyellow;
+       }
+       .box3{
+           background-color:blue;
+       }
+       .box4{
+           background-color:grey;
+       }
+       
+       p{
+           font-size: 30px;
+           padding-left: 10px;
+           margin-top: 5px;
+            color: rgb(172, 165, 165);
+       }
+       
+       @media all and (min-width:421px) and (max-width:765px){
+        #b2{
+            grid-template-columns:repeat(2,1fr) ;
+
+        }
+        .b1>h2{
+           font-size: 40px;
+           padding-left: 20px;
+           padding-top: 20px;
+       }
+       }
+
+       @media all and (min-width:81px) and (max-width:420px){
+        #b2{
+            grid-template-columns:repeat(1,1fr) ;
+
+        }
+        .b1>h2{
+           font-size: 30px;
+           padding-left: 20px;
+           padding-top: 20px;
+           box-sizing: border-box;
+         
+       }
+       }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="b1">
+            <h2>Navigation</h2>
+        </div>
+        <div id="b2">
+            <div class="box1"><p>Box 1</p></div>
+           <div class="box2"><p>Box 2</p></div>
+           <div class="box3"><p>Box 3</p></div>
+           <div class="box4"><p>Box 4</p></div>
+        </div>
+           
+       
+    </div>
+</body>
+</html>

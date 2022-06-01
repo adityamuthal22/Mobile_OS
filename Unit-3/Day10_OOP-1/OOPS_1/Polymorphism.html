@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Polymorphism</h1>
+</body>
+</html>
+
+<script>
+
+class MasaiSchool {
+    run(){
+        console.log("MasaiSchool is Running");
+    }
+}
+
+class Scrum extends MasaiSchool{
+    run(){
+        console.log("Scrum is Live");
+    }
+}
+
+class DSA extends Scrum{
+    run(){
+        console.log("DSA lecture is Running");
+    }
+}
+
+class Skillathon extends DSA{
+    run(){
+        console.log("Skillathon is Running");
+    }
+}
+
+class Coding extends Skillathon{
+    run(){
+        console.log("Coding lecture is Running");
+    }
+}
+
+
+let masai = new MasaiSchool();
+let scrum = new Scrum();
+let dsa = new DSA();
+let skill = new Skillathon();
+let coding = new Coding();
+
+masai.run();
+scrum.run();
+dsa.run();
+skill.run();
+coding.run();
+
+</script>

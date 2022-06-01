@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            
+            
+        }
+        #box{
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+            text-align: center;
+           
+        }
+            
+            #img{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              }
+        #log{
+            height:70px;
+            margin-top: -15px;    
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <h1>Strategic Investors</h1>
+    <div id="container">
+       
+    </div>
+
+</body>
+</html>
+
+<script>
+    
+    var investors=[
+        
+        {
+            name:"Vijay Shekar Sharma",
+            image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+            Role: "Founder & CEO",
+        },
+        {
+            name:"Kunal Shah",
+            image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png",
+            Role:"Founder",
+        },
+        {
+            name:"Amrish Rau",
+            image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png",
+            Role:"CEO",
+        },
+        {
+            name:"Sampad Swain",
+            image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png",
+            Role:"Co-Founder & CEO",
+        },
+        ];
+            // var h1=document.createElement("h1");
+            // h1.innerText="Strategic Investors";
+            // document.querySelector("body").append(h1)
+        investors.map(function(ele){
+            var box=document.createElement("div");
+
+            var img=document.createElement("img");
+            img.src=ele.image;
+
+            var name=document.createElement("h2");
+            name.innerText=ele.name;
+            
+            var n=document.createElement("p");
+            n.innerText=ele.Role;
+
+            var logo=document.createElement("img");
+            logo.src=ele.companyLogo;
+           
+            box.append(img,name,n,logo);
+            document.querySelector("#container").append(box);
+
+
+
+            box.setAttribute("id","box");
+            img.setAttribute("id","img");
+            logo.setAttribute("id","log");
+            name.setAttribute("class","name")
+            n.setAttribute("class","role")
+        });
+
+
+
+</script>

@@ -1,0 +1,48 @@
+#navabar{
+    display: flex;
+    height: 50px;
+    border: 1px solid black;
+   gap: 10px;
+   align-items: center;
+   background-color: white;
+   
+}
+#menu{
+    margin-left: 10px;
+    font-size: 30px;
+}
+#you{
+    margin-left: 30px;
+    font-size: 30px;
+    color: red;
+}
+h3{
+    margin-left:-5px;
+    font-size: 23px;
+    font-family:  Roboto;
+}
+#query{
+    margin-left: 10%;
+    width: 40%;
+    height: 30px;
+}
+#search{
+    margin-left: -10px;
+    height: 36px;
+    width: 60px;
+}
+#show_videos{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:5%;
+    border: none;
+}
+#show_videos>div{
+    /* border: 1px solid blue; */
+ 
+}
+iframe{
+    border-radius: 10px;
+    border: none;
+}

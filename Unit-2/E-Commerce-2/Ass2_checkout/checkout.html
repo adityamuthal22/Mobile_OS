@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: teal;
+            padding: 20px;
+            font-size: 30px;
+            border-radius: 20px;
+        }
+        a{
+            text-decoration: none;
+            color:pink;    
+        }
+
+        #Navbar a:hover{
+            color: white;  
+        }
+        #Navbar a{
+            cursor: pointer;
+        }
+        #form{
+            text-align: center;
+            margin-top: 40px;
+         
+        }
+        #form input{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div id="Navbar">
+        <div><a target="blank"  href="mens.html">Mens</a></div>
+        <div><a target="blank" href="women.html">Womens</a></div>
+        <div><a target="blank" href="signup.html">Signup</a></div>
+        <div><a target="blank" href="login.html">Login</a></div>
+        <div><a target="blank" href="cart.html">My cart</a></div>
+    </div>
+    <form id="form">
+        <h1>Payement Form</h1>
+        <label for="cname">Name on Card:-</label><br>
+        <input id="name" type="text" placeholder="Enter the name"><br>
+        <label for="ccnum">Credit card number:-</label><br>
+        <input id="num" type="number" placeholder="Enter the Card Number"><br>
+        <label for="cvv">CVV:-</label><br>
+        <input id="cvv" type="number" placeholder="Enter the CVV" ><br>
+        <label for="date">Expiry Date:-</label><br>
+        <input id="date" type="number" placeholder="Enter the Expiry date"><br>
+        <input id="submit" type="submit">
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit", checkout);
+
+    var paydata=JSON.parse(localStorage.getItem("payementdata"))||[];
+    function checkout() {
+      event.preventDefault();
+    //   window.location.href = "checkoutOtp.html"
+        var formobj={
+                name:document.querySelector("#name").value,
+                number:document.querySelector("#num").value,
+                CVV:document.querySelector("#cvv").value,
+                Date:document.querySelector("#date").value,
+
+        };
+
+        console.log(formobj);
+        paydata.push(formobj);
+        console.log(paydata)
+     localStorage.setItem("paymentdata",JSON.stringify(paydata));
+    alert("Payment Successfully");
+    }
+ 
+    // let price = JSON.parse(localStorage.getItem("total")) || [];
+    // price.map(function(ele) {
+    //   console.log("inside function");
+    //   let div = document.createElement("div");
+    //   div.innerText = "Payment of ₹ " + ele.price;
+    //   document.querySelector("#payment").append(div);
+    // })
+  </script>

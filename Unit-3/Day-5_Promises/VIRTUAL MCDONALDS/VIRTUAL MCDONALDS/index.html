@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              body{
+    background-image: url('https://images.unsplash.com/photo-1583779791512-eeccdee5c5dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWNkb25hbGRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+background-size:cover;
+    
+}
+#Mac{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+ 
+}
+        #image{
+            display: block;
+            margin: auto;
+            height: 300px;
+            width: 600px;
+        }
+        #para{
+            text-align: center;
+            margin-top: 10px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color:orange;
+            font-size: 50px;
+            font-weight: bold;
+        
+     
+        }
+        #orderid{
+            margin-left: 80%;
+            color: brown;
+            font-size: 30px;
+        }
+        #container{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 20%;
+            margin: auto;
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            
+        }
+        #container>select{
+            display: block;
+            margin: auto;
+        }
+        #container>button{
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+        }
+        #submit{
+            padding: 5px;
+            border: transparent;
+            background-color: teal;
+            border-radius: 5px;
+            color: white;
+        }
+        #submit:hover{
+            cursor: pointer;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="text" name="" id="burger" placeholder="burger">
+    <input type="text" name="" id="pizza" placeholder="pizza"> -->
+    <h1 id="Mac">Mcdonald's</h1>
+   <div id="container">
+    
+    <select name="" id="food">
+        <option value="burger">Burger</option>
+        <option value="pizza">Pizza</option>
+        <option value="cofee">Cofee</option>
+        <option value="tea">Tea</option>
+        </select>
+        <button onclick="orderFood()" id="submit">Order Food</button>
+   </div>
+   <p id="orderid">Order Id</p>
+   <p id="para">Order Food</p>
+    <img id="image">
+</body>
+</html>
+
+<script>
+
+function orderFood() {
+    let image = document.getElementById("image");
+        // let burger = document.getElementById("burger").value;
+        // let pizza = document.getElementById("pizza").value;
+        let selected = document.getElementById("food").value;
+        let para = document.getElementById("para");
+        let orderid = document.getElementById("orderid"); 
+        let random = Math.random()*10;
+        let randomnumber = Math.floor(random);
+        let status = "open";
+
+        let mypromise = new Promise(function (resolve, reject) {
+            let time = Math.random() * 10 * 500;
+
+            setTimeout(function () {
+            if (status === "open") {
+                if(selected)
+                {
+                    resolve(selected);
+                }
+                // else if(selected == "pizza")
+                // {
+                //     resolve(selected);
+                // }
+                // else if(selected == "cofee")
+                // {
+                //     resolve(selected);
+                // }
+                // else if(selected == "tea")
+                // {
+                //     resolve(selected);
+                // }
+            } else {
+                reject();
+            }
+            }, time);
+        });
+
+        mypromise.then(function (res) {
+            if(res == "burger")
+            {
+                console.log(`${res} is ready`);
+                if(randomnumber == 0)
+                {
+                    orderid.innerText = `Order Id: 1`;
+                }
+                else
+                {
+                    orderid.innerText = `Order Id: ${randomnumber}`;
+                }
+                para.innerText = "Burger On Table";
+                image.src = "https://i.insider.com/5bbd187101145529745a9895?width=700";
+            }
+            else if(res == "pizza")
+            {
+                if(randomnumber == 0)
+                {
+                    orderid.innerText = `Order Id: 1`;
+                }
+                else
+                {
+                    orderid.innerText = `Order Id: ${randomnumber}`;
+                }
+                para.innerText = "Pizza On Table";
+                image.src = "https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg";
+            }
+            else if(res == "cofee")
+            {   if(randomnumber == 0)
+                {
+                    orderid.innerText = `Order Id: 1`;
+                }
+                else
+                {
+                    orderid.innerText = `Order Id: ${randomnumber}`;
+                }
+                para.innerText = "Cofee On Table";
+                image.src = "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg";
+            }
+            else if(res == "tea")
+            {
+                if(randomnumber == 0)
+                {
+                    orderid.innerText = `Order Id: 1`;
+                }
+                else
+                {
+                    orderid.innerText = `Order Id: ${randomnumber}`;
+                }
+                para.innerText = "Tea On Table";
+                image.src = "https://images.news18.com/ibnlive/uploads/2021/03/1614664667_untitled-design-3.jpg?im=FitAndFill,width=1200,height=900";
+            }
+        });
+}
+</script>

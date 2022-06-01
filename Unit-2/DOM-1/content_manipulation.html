@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content Manipulation</title>
+</head>
+<body>
+	<h1 id="firstname">Hello</h1>
+	<div id="lastname">MASAI</div>
+	<p id="fullname">School</p>
+    
+	<hr/>
+	<button onclick="setFirstName()">FIRSTNAME</button>
+	<button onclick="setLastName()">LASTNAME</button>
+	<button onclick="setFullName()">FIRSTNAME LASTNAME</button>
+	<button onclick="resetDefaults()">RESET DEFAULTS</button>
+	<script type="text/javascript">
+		function setFirstName() {
+			document.getElementById("firstname").innerText="Aditya";
+		}
+
+		function setLastName() {
+			document.getElementById("lastname").innerText="Muthal";
+		}
+
+		function setFullName() {
+			document.getElementById("fullname").innerText="Aditya-Muthal";
+		}
+
+		function resetDefaults(){
+			var a=document.getElementById("firstname").innerText=""
+            var b=document.getElementById("lastname").innerText=""
+            var c=document.getElementById("fullname").innerText=""
+                // console.log(a)
+            // if(a.value && b.value && c.value == empty){
+            //     a.innerText=""
+            //     b.innerText=""
+            //     c.innerText=""
+
+            // }
+		}
+	</script>
+</body>
+</html>

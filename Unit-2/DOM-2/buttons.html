@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Container{
+            height: 100px;
+            width: 80%;
+            /* border:1px solid black; */
+            margin: auto;
+            display:grid;
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows: repeat(1,1fr);
+            margin-top: 60px;
+            gap: 5px;
+        }
+        #Container>div{
+            /* border: 1px solid blue; */
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+        }
+        button{
+            height: 60%;
+            width: 100%;
+            padding: 10px 15px 10px 15px;
+            border-radius: 10px;    
+            border: none;
+            color: white;
+            font-size: 25px;
+        }
+        button:hover{
+            background-color:red;
+        }
+        .Primary{
+            background-color: #067bff;
+           
+        }
+        .Secondary{
+            background-color: #6c757d;
+           
+        }
+        .Success{
+            background-color: #28a745;
+           
+        }
+        .Danger{
+            background-color: #dc3544;
+           
+        }
+        .Warning{
+            background-color: #ffc008;
+        }
+        .Info{
+            background-color: #15a2b8;
+        }
+        .Light{
+            background-color: #f8f9fa;
+            color: black;
+        }
+        .Dark{
+            background-color: #343a40;
+        }
+        p{
+            font-size: 30px;
+            color: #067bff;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <div>
+            <button class="Primary">Primary</button>
+        </div>
+        <div>
+            <button class="Secondary">Secondary</button>
+        </div>
+        <div>
+            <button class="Success">Success</button>
+        </div>
+        <div>
+            <button class="Danger">Danger</button>
+        </div>
+        <div>
+            <button class="Warning">Warning</button>
+        </div>
+        <div>
+            <button class="Info">Info</button>
+        </div>
+        <div>
+            <button class="Light">Light</button>
+        </div>
+        <div>
+            <button class="Dark">Dark</button>
+        </div>
+        <div>
+            <p>Link</p>
+        </div>
+    </div>
+</body>
+</html>

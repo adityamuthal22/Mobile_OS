@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Abstraction</h1>
+</body>
+</html>
+
+<script>
+
+    class Customer{
+        constructor(n,sn,g)
+        {
+            this.name = n;
+            this.sirname = sn;
+            this.gender = g;
+            this.address = [];
+            this.contact = [];
+        }
+        Cusdaddress(addr)
+        {
+            this.address.push(addr);
+        }
+        CustconNum(mobileNo)
+        {
+            this.contact.push(mobileNo);
+        }
+    }
+
+    let p1 = new Customer("Aditya","Muthal","Male");
+    p1.Cusdaddress("At-Nashik");
+    p1.CustconNum(551165926256);
+    console.log('p1:',p1);
+
+
+</script>

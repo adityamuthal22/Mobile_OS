@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+     body{
+        background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size:cover;
+        
+    }
+     #container{
+         margin-top: 50px;
+         
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         grid-template-rows: auto; 
+          gap: 20px;
+         text-align: center;
+         margin-left: 500px;
+        
+     }
+     #container>div{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: 550px;
+        width: 300px;
+        border-radius: 20px;
+        color: black;
+        background-color: white;
+        font-weight: bold;
+    }
+     img{
+         border-top-left-radius: 20px;
+         border-top-right-radius: 20px;
+         height: 70%;
+         width: 100%;
+     }
+     #navbar{
+         background-color: teal;
+         height: 50px;
+         text-align: center;
+         border-radius: 10px;
+        
+     }
+     #navbar>input{
+    margin: 10px;
+        border-radius: 10px;
+        border: none;
+        height: 30px;
+        width: 50%;
+        margin-right: 30px;
+
+     }
+     #submit{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(180, 87, 87);
+            color: white;
+     }
+     #submit:hover{
+         color:black;
+         background-color: pink;
+     }
+     #img1{
+         height: 400px;
+         width: 300px;
+     }
+   
+ </style>
+</head>
+<body>
+   
+        <div id="navbar">
+            <input type="text" id="movie">
+            <button onclick="getData()" id="submit">Search Movie</button>
+        </div>
+     
+        <div id="container">
+         
+        </div> 
+
+
+         
+</body>
+</html>
+<script src="index.js"></script>
+

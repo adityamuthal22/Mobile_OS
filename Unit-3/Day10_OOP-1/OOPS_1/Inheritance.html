@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inheritance</h1>
+</body>
+</html>
+
+<script>
+
+class Family{
+    constructor(n,s){
+        this.name=n;
+        this.member=4;
+        this.surname;
+    }
+}
+class grandfather extends Family {
+    constructor(n,s){
+        super(n,s);
+
+        this.headfamily=true;
+    }
+
+}
+class father extends grandfather{
+    constructor(n,s,value){
+        super(n,s);
+
+        this.farmer=value;
+    }
+}
+let s1=new father("Sudhakar","Muthal",true);
+console.log("s1:",s1);
+
+    class Cat {
+        constructor(l,e,n,ea)
+        {
+            this.lengs = 4;
+            this.eyes = 2;
+            this.nose = 1;
+            this.ear = 2;
+
+        }
+    }
+
+    class Cat1 extends Cat {
+        constructor(l,e,n,ea)
+        {
+            super(l,e,n,ea)
+            this.gender ="male";
+        }
+    }
+
+    class Cat2 extends Cat1 {
+        constructor(l,e,n,ea)
+        {
+            super(l,e,n,ea)
+            this.gender ="female";
+        }
+    }
+
+    class Cat3 extends Cat2 {
+        constructor(l,e,n,ea)
+        {
+            super(l,e,n,ea)
+        }
+    }
+
+    let c = new Cat3();
+    console.log('c:',c);
+
+
+
+
+
+
+</script>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            /* border: 1px solid red; */
+            height: 150px;
+            width: 25%;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+            padding-right: 60px;
+            /* gap: 10px; */
+            background-color: whitesmoke;
+            border-radius: 10px;
+        }
+        #container>div{
+            height: 40px;
+            width: 60px;
+            border: 1px solid black;
+            /* margin-top: 30px; */
+            /* margin-left: 40px */
+            margin: auto;
+           
+        }
+        #roll{
+            display: block;
+            margin: auto;
+        }
+        #winner{
+        
+            margin: auto;
+            text-align: center;
+            margin-top: 80px;
+            border: 1px solid red;
+            height: 30px;
+            width: 20%;
+            background-color: whitesmoke;
+            padding: 3px;
+        }
+        #member-1{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 200px;
+        }
+        #member-2{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 200px;
+        }
+        #member-3{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 200px;
+        }
+        #roll{
+            background-color: tomato;
+            color: white;
+            border: transparent;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        #para1{
+            margin-top: 100px;
+            margin-left: -120px;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="winner">Winner is :- </div>
+    <div id="container">
+        <div id="member-1"></div>
+        <p id="para1">Member A</p>
+        <div id="member-2"></div>
+        <p id="para1">Member B</p>
+        <div id="member-3"></div>
+        <p id="para1">Member C</p>
+
+    </div>
+    <button id="roll">Roll Dice</button>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("#roll").addEventListener("click", rollDice);
+    function rollDice(){
+
+        var A = Math.floor(Math.random(Number)*7);
+        var B = Math.floor(Math.random(Number)*7);
+        var C = Math.floor(Math.random(Number)*7);
+
+        document.querySelector("#member-1").innerText = A;
+        document.querySelector("#member-2").innerText = B;
+        document.querySelector("#member-3").innerText = C;
+        if(A>B && A>C)
+        {
+            document.getElementById("winner").innerText = `Winner is : ${"Member A"}`;
+        }
+        else if(B>A && B>C)
+        {
+            // document.getElementById("winner").innerText = B;
+            document.getElementById("winner").innerText = `Winner is : ${"Member B"}`;
+        }
+        else if(C>A && C>B)
+        {
+            // document.getElementById("winner").innerText = C;
+            document.getElementById("winner").innerText = `Winner is : ${"Member C"}`;
+        }
+        else if(A==B || A==C)
+        {
+            document.getElementById("winner").innerText = "Draw";
+        }
+        else if(B==A || B==C)
+        {
+            document.getElementById("winner").innerText = "Draw";
+        }
+        else if(C==A || C==B)
+        {
+            document.getElementById("winner").innerText = "Draw";
+        }
+
+
+
+        if(A>B && A>C)
+        {
+            document.getElementById("member-1").style.backgroundColor = "green";
+        }
+        if(A==B || A==C)
+        {
+            document.getElementById("member-1").style.backgroundColor = "blue";
+            // document.getElementById("member-2").style.backgroundColor = "blue";
+            // document.getElementById("member-3").style.backgroundColor = "blue";
+        }
+        if(A>B && A<C)
+        {
+            document.getElementById("member-1").style.backgroundColor = "yellow";
+        }
+        if(A<B && A>C)
+        {
+            document.getElementById("member-1").style.backgroundColor = "yellow";
+        }
+        if(A<B && A<C)
+        {
+            document.getElementById("member-1").style.backgroundColor = "red";
+        }
+        // for B
+
+        if(B>A && B>C)
+        {
+            document.getElementById("member-2").style.backgroundColor = "green";
+        }
+        if(B==A || B==C)
+        {
+            document.getElementById("member-2").style.backgroundColor = "blue";
+            // document.getElementById("member-2").style.backgroundColor = "blue";
+            // document.getElementById("member-3").style.backgroundColor = "blue";
+        }
+        if(B>A && B<C)
+        {
+            document.getElementById("member-2").style.backgroundColor = "yellow";
+        }
+        if(B<A && B>C)
+        {
+            document.getElementById("member-2").style.backgroundColor = "yellow";
+        }
+        if(B<A && B<C)
+        {
+            document.getElementById("member-2").style.backgroundColor = "red";
+        }
+
+        // for C
+        if(C>B && C>A)
+        {
+            document.getElementById("member-3").style.backgroundColor = "green";
+        }
+        if(C==B || C==A)
+        {
+            document.getElementById("member-3").style.backgroundColor = "blue";
+            // document.getElementById("member-2").style.backgroundColor = "blue";
+            // document.getElementById("member-3").style.backgroundColor = "blue";
+        }
+        if(C>B && C<A)
+        {
+            document.getElementById("member-3").style.backgroundColor = "yellow";
+        }
+        if(C<B && C>A)
+        {
+            document.getElementById("member-3").style.backgroundColor = "yellow";
+        }
+        if(C<B && C<A)
+        {
+            document.getElementById("member-3").style.backgroundColor = "red";
+        }
+    }
+  
+
+
+
+</script>

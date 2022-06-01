@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="gender">
+        <option value="">--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <input type="number" id="BirthDate" placeholder="Enter the Year of Birth" value="">
+<button id="valid" onclick="Myfunction()">Click On</button>
+</body>
+</html>
+
+<script>
+function Myfunction(){
+    var Birth=document.getElementById("BirthDate").value;
+    var maleage,femaleage=2022-Birth;
+    // console.log(age);
+
+    if(maleage>21 || femaleage>18){
+        alert(document.getElementById("BirthDate").innerText="Legal Age to get married")
+    }
+    else{
+        alert(document.getElementById("BirthDate").innerText="Not Legal Age to get married")
+    }
+
+}
+
+</script>

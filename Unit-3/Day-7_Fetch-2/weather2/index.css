@@ -1,0 +1,86 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1548263594-a71ea65a8598?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+#container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* background-color: antiquewhite; */
+    color: white;
+    line-height: 10px;
+    opacity: 95%;
+    /* border: 1px solid teal; */
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#container button {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: rgb(85, 212, 153);
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#container div {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+#container button {
+    width: 100%;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#container #manual {
+    display: flex;
+    flex-direction: row;
+}
+#container #manual input {
+    width: 69%;
+    border: none;
+    font-size: xx-large;
+    text-align: center;
+    opacity: 75%;
+    color: black;
+    border-radius: 10px;
+}
+#container #manual button {
+    width: 29%;
+    margin-right: 0px;
+}
+
+#details {
+    background-color: teal;
+}
+
+#container #details7Days {
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+#details7Days div {
+    /* border: 1px solid red; */
+    background-color: teal;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#details7Days div h3 {
+    text-align: center;
+} 

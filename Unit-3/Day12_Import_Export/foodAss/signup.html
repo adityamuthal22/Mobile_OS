@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <form id="signup">
+       
+        <div>
+            <h1>SignUp Page</h1>
+            <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="text" id="username" placeholder="User Name" required>
+        <input type="number" id="mobile" placeholder="Mobile" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <button id="submit">Submit</button> 
+        </div>
+        
+    </form>
+</body>
+</html>
+<script type="module">
+   import navbar from "./scripts/navbar.js";
+    document.getElementById("navbar").innerHTML=navbar();
+
+    let register =async(e) => {
+        e.preventDefault();
+        let form_data ={
+            name: document.getElementById("name").value,
+            email:document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            username: document.getElementById("username").value,
+            mobile:document.getElementById("mobile").value,
+            description:document.getElementById("description").value,
+        };
+        // console.log(form_data);
+
+        form_data=JSON.stringify(form_data);
+        let res= await fetch("https://masai-api-mocker.herokuapp.com/auth/register",
+        {
+            method:'Post',
+            body:form_data,
+            // mode:"no-cors",
+            headers:{
+                "Content-Type":"application/json",
+            },
+        }
+        );
+    let data = await res.json();
+    console.log(data);
+    if(data.error!=="false"){
+        alert("Registration Successfull")
+        window.location.href="login.html";
+    }
+    else    {
+        alert("User aleready Exist");
+    }
+};
+    document.getElementById("submit").addEventListener("click", register);
+</script>

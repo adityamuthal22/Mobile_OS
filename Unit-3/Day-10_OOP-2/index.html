@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+    background-image: url('https://images.unsplash.com/photo-1616249091879-08e72abe94e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYW5zbGF0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+background-size:cover;
+    
+}
+h1{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: orange;
+    background-color: black;
+    border-radius: 15px;
+}
+#box{
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 100%;
+    display: flex;
+    /* margin: auto; */
+}
+#input{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    height: 70%;
+    width: 40%;
+    margin: auto;
+    background-color:white;
+   border-radius: 10px;
+}
+#input-text{
+  width: 300px;
+
+}
+#output{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    height: 70%;
+    width: 40%;
+    margin: auto;
+    background-color:white;
+    border-radius: 10px;
+}
+
+    </style>
+</head>
+<body>
+    
+    <h1>TRANSLATE APP</h1>
+    <div id="box" oninput="debounce(Translate,200)">
+        <div id="input">
+           
+            <select name="inp_lang" id="inp_lang">
+
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+
+            </select>
+
+            <textarea name="input-text" id="input-text" ></textarea>
+        </div>
+       
+        <div id="output">
+            
+            <select name="out_lang" id="out_lang">
+               
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                
+            </select>
+            <p id="output_value"></p>
+            <!-- <textarea name="output-text" id="output-text" ></textarea> -->
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function read(id){
+        return document.getElementById(id).value;
+    }
+
+    async function Translate(){
+        try{
+        let input =read("input-text");
+        // console.log("input:",input);
+
+        const input_lang=read("inp_lang");
+        const out_lang=read("out_lang");
+
+        const res =await fetch("https://libretranslate.de/translate",{
+            method:"POST",
+
+            body:JSON.stringify({
+                q:input,
+                source:"en",
+                target:"hi",
+                format:"text",
+            }),
+            headers:{
+                "Content-Type": "application/json",
+            },
+        });
+        const {translatedText }=await res.json();
+        // console.log("data:",res);
+        document.getElementById("output_value").innerText=translatedText;
+    } catch(err){
+        console.log("err:",err);
+    }
+}
+
+let id;
+    function debounce(func,delay){
+        if (id) {
+            clearTimeout(id);
+        }
+
+          id=  setTimeout(function(){
+            func();
+        },delay);
+    }
+</script>

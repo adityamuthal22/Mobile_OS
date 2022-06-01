@@ -1,0 +1,24 @@
+#navbar{
+   display: flex;
+   gap: 15px;
+   justify-content: end;
+   background-color: antiquewhite;
+   height: 20px;
+    padding: 10px 10px;
+}
+#items{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    text-align: center;
+}
+#items>div{
+  height: 300px;  
+border: 1px solid blue;
+}
+img{
+    height: 50%;
+    width: 100%;
+}

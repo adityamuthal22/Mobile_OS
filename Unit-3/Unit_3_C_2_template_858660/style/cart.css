@@ -1,0 +1,19 @@
+#cart{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    text-align: center;
+}
+#cart>div{
+  height: 300px;  
+border: 1px solid blue;
+}
+img{
+    height: 50%;
+    width: 100%;
+}
+#checkout{
+   margin-top: 100px;
+}

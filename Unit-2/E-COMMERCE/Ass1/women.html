@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            margin: auto;
+        }
+        #container>div{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        button{
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            background-color: teal;
+        }
+        h3{
+            font-size: 15px;
+            padding: 15px;
+        }
+        img{
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Womens</h1>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var mendata = [
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/14/6de055b9-f416-46c4-85fd-d40f837ea95d1602630018652-1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17193226/2022/2/17/7738c355-5ff9-4962-b833-23298e5a34e11645094189571KALINIWomenTurquoiseBlueGottaPattiKurtiwithShararaWithDupatt1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$35.00",
+        strikedOffPrice:"$10.00"
+    },{
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11704676/2020/6/13/f394d487-dfb8-4349-b7d6-db2ae0bdfd481592036128021IndoEraBluePrintedAnarkaliKurtas1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$35.00",
+        strikedOffPrice:"$60.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11519290/2020/2/25/19cf3192-3ca7-46a4-88e6-e5ae137995c01582624360192-See-Designs-Women-Blue--White-Printed-Straight-Kurta-1011582-1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$35.00",
+        strikedOffPrice:"$18.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13902678/2021/4/6/a5dfcb9a-af2a-4ed8-98bf-e10a8b3b5a891617704827106-Anouk-Women-Kurta-Sets-911617704825967-1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/2/26/90bb68b5-6a6b-4cc5-a9cf-07eb1693204d1614343912929-1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$35.00",
+        strikedOffPrice:"$70.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10356511/2019/8/8/a28f9ccb-c0d7-4e66-87f0-e639f157ff2d1565263388836-Libas-Women-Kurta-Sets-571565263387250-1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$35.00",
+        strikedOffPrice:"$18.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/4/5/e59c4735-e5c0-4c08-8ef5-7c3ce6cee96c1617599157870-1.jpg",
+        name:"LATEST WOMEN'S KURTAS & SUITS",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },
+];
+
+
+    mendata.map(function(ele){
+
+        var box=document.createElement("div");
+        console.log(box);
+
+        var img=document.createElement("img");
+        img.src=ele.imgUrl;
+
+        var name=document.createElement("h3");
+        name.innerText=ele.name;
+        
+        var price=document.createElement("h4");
+        price.innerText=ele.price;
+
+        var button=document.createElement("button");
+        button.innerText="Add to Cart"
+
+        box.append(img,name,price,button);
+        document.querySelector("#container").append(box)
+
+        
+    })
+
+
+</script>

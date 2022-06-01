@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outerbox{
+            height: 500px;
+            width: 45%;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 50px;
+            grid-template-areas: 
+            "a b b c"
+            "d d e f"
+            "g h i i";
+        }
+        #outerbox > div{
+            background-color: #217867;
+            color: white;
+            border-radius: 5px;
+            font-size: 60px;
+            font-weight: bold;
+            padding: 30px;
+
+        }
+        #outerbox>div:nth-child(1){
+        grid-area: a;
+        }
+        #outerbox>div:nth-child(2){
+         grid-area: b;
+        }
+         #outerbox>div:nth-child(3){
+             grid-area: c;
+         }
+         #outerbox>div:nth-child(4){
+             grid-area: d;
+         }
+         #outerbox>div:nth-child(5){
+             grid-area: e;
+         }
+         #outerbox>div:nth-child(6){
+             grid-area: f;
+         }
+         #outerbox>div:nth-child(7){
+             grid-area: g;
+         }
+         #outerbox>div:nth-child(8){
+             grid-area: h;
+         }
+         #outerbox>div:nth-child(9){
+             grid-area: i;
+         }
+
+}
+    </style>
+</head>
+<body>
+    <div id="outerbox">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

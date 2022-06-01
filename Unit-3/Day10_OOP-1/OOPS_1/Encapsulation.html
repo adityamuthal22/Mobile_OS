@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Encapsulation</h1>
+</body>
+</html>
+
+<script>
+
+    class ATM{
+        constructor(){
+            var name;
+            var cardnumber;
+            var cardpin;
+            var cardcv;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(value){
+            this.name = value;
+        }
+
+        getCardNum(){
+            return this.cardnumber;
+        }
+        setCardNum(value){
+            this.cardnumber = value;
+        }
+
+        getCardPin(){
+            return this.cardpin;
+        }
+        setCardPin(value){
+            this.cardpin = value;
+        }
+
+        getCardCV(){
+            return this.cardcv;
+        }
+        setCardCV(value){
+            this.cardcv = value;
+        }
+    }
+
+    let person1 = new ATM();
+
+    person1.setName("Aditya");
+    person1.setCardNum("1234562556257845");
+    person1.setCardPin("11552233");
+    person1.setCardCV("999");
+
+    console.log("name:", person1.getName());
+    console.log("CardNum:", person1.getCardNum());
+    console.log("CardPin:", person1.getCardPin());
+    console.log("CardCV:", person1.getCardCV());
+    
+
+
+
+</script>

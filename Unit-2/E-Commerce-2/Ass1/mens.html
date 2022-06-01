@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+          
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            margin: auto;
+        }
+        #container>div{
+           
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+        button{
+            background-color:rgb(109, 109, 228);
+           cursor: pointer;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            background-color: teal;
+
+        }
+        img{
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+        }
+        img:hover{
+            cursor: -webkit-image-set(url(https://constant.myntassets.com/web/assets/img/6d2dbca4-700f-4822-9759-5c92b82…-Zoom-icon-1x.png) 1x,url(https://constant.myntassets.com/web/assets/img/cc4af777-3503-4e6b-8cbf-443b62b…-Zoom-icon-2x.png) 2x),crosshair;
+          
+        }
+        #Navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: teal;
+            padding: 20px;
+            font-size: 30px;
+            border-radius: 20px;
+          
+        }
+        a{
+            text-decoration: none;
+            color:pink;
+            
+        }
+        #Navbar a:hover{
+            color: white;  
+        }
+        #Navbar a{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <button><a href="cart.html">Go to Cart</a></button>
+    <div id="Navbar">
+        <div><a target="blank"  href="mens.html">Mens</a></div>
+        <div><a target="blank" href="women.html">Womens</a></div>
+        <div><a target="blank" href="signup.html">Signup</a></div>
+        <div><a target="blank" href="login.html">Login</a></div>
+        <div><a target="blank" href="cart.html">My cart</a></div>
+    </div>
+    <h1>Mens</h1>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var mendata = [
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10673544/2019/9/24/66eb9c68-a2d9-41b1-8016-cf769e78d3a11569310358918-The-Indian-Garage-Co-Men-Shirts-8481569310357131-3.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"2500.00",
+        strikedOffPrice:"950.00"
+    },{
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7288105/2018/10/24/a059288c-512c-468a-87d4-ce36b52840441540360274049-HERENOW-Men-Shirts-5241540360273894-1.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"535.00",
+        strikedOffPrice:"1000.00"
+    },{
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17176850/2022/2/16/62ac7da6-ec0c-4dc6-8934-ff36472697b91645023889073JackJonesMenMulticolouredPrintedHoodedSweatshirt1.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"735.00",
+        strikedOffPrice:"600.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15144304/2021/8/13/defcdc57-3c80-45e9-92c2-db9f8095b21d1628866321029Sweatshirts1.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"935.00",
+        strikedOffPrice:"1800.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7290163/2018/11/12/41e519c0-1b40-4e90-b479-cab6276fa48b1542001416632-Roadster-Men-Black-Solid-Sweatshirt-3001542001416439-1.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"435.00",
+        strikedOffPrice:"1000.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15913770/2021/11/16/8003171d-2ce7-4181-b411-0bf3c52a0df41637064872223-Allen-Solly-Men-Sweatshirts-8031637064871578-1.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"835.00",
+        strikedOffPrice:"700.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15144304/2021/8/13/defcdc57-3c80-45e9-92c2-db9f8095b21d1628866321029Sweatshirts1.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"935.00",
+        strikedOffPrice:"1800.00"
+    },
+    {
+        imgUrl:"https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10673544/2019/9/24/66eb9c68-a2d9-41b1-8016-cf769e78d3a11569310358918-The-Indian-Garage-Co-Men-Shirts-8481569310357131-3.jpg",
+        name:"LATEST MEN’S Shirts",
+        price:"425.00",
+        strikedOffPrice:"950.00"
+    },
+];
+
+    var cartData=JSON.parse(localStorage.getItem("cart"))|| []
+    
+    mendata.map(function(ele){
+
+        var box=document.createElement("div");
+        // console.log(box);
+
+        var img=document.createElement("img");
+        img.src=ele.imgUrl;
+
+        var name=document.createElement("h3");
+        name.innerText=ele.name;
+        
+        var price=document.createElement("h4");
+        price.innerText=ele.price;
+
+        var button=document.createElement("button");
+        button.innerText="Add to Cart";
+        button.addEventListener("click",function(){
+            addToCart(ele);
+        })
+
+        box.append(img,name,price,button);
+        document.querySelector("#container").append(box);
+
+    })
+    function addToCart(ele){
+        console.log(ele);
+        cartData.push(ele);
+        localStorage.setItem("cart",JSON.stringify(cartData))
+        alert("Item added to cart");
+    }
+
+
+</script>

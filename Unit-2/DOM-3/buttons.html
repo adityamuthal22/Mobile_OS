@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #color{
+           border: none;
+            font-size: 40px;
+            border-radius: 10px;
+            padding:10px 15px 10px 15px ;
+            margin-right: 5px;
+            margin-top: 40px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var buttonObj=[
+        {textContent:"Primary",color:"white",bgcolor:"blue"},
+        {textContent:"Secondary",color:"white",bgcolor:"grey"},
+        {textContent:"Success",color:"white",bgcolor:"Green"},
+        {textContent:"Danger",color:"white",bgcolor:"red"},
+        {textContent:"Warning",color:"white",bgcolor:"yellow"},
+        {textContent:"Info",color:"white",bgcolor:"cyan"},
+        {textContent:"Light",color:"black",bgcolor:"ghostwhite"},
+        {textContent:"Dark",color:"white",bgcolor:"black"},
+        {textContent:"Link",color:"blue",bgcolor:"white"},
+    ];
+
+    buttonObj.map(function(ele,index,arr){
+        var btn1=document.createElement("button");
+        btn1.innerText=ele.textContent;
+       
+        btn1.style.backgroundColor=ele.bgcolor;
+       
+        btn1.style.color=ele.color;
+
+        document.querySelector("body").append(btn1);
+        btn1.setAttribute("id","color")
+    })
+
+</script>
